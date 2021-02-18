@@ -1,0 +1,224 @@
+@import url('normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: hsl(0, 100%, 74%);
+  background-image: url('../images/bg-intro-mobile.png');
+  color: white;
+}
+
+.container {
+  display: grid;
+
+  grid-template-areas:
+    "main"
+    "footer";
+
+  grid-template-rows: 1fr auto;
+  grid-gap: 10px;
+
+  height: calc(100vh - 10px);
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.pitch {
+  padding: 80px 0 50px 0;
+}
+
+.pitch__header {
+  margin: 0 auto 35px;
+  max-width: 300px;
+  font-size: 1.7em;
+  text-align: center;
+  line-height: 1.3em;
+}
+
+.pitch__description {
+  margin: 0 auto;
+  max-width: 350px;
+  text-align: center;
+  line-height: 1.7em;
+}
+
+.trial {
+  max-width: 350px;
+  margin: 0 auto 20px;
+  padding: 15px;
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0 7px rgba(0, 0, 0, 0.15);
+}
+
+.trial__details {
+  max-width: 180px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.6em;
+  font-size: 1em;
+}
+
+.trial__details--bold {
+  font-weight: 600;
+}
+
+.sign-up-form {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 7px rgba(0, 0, 0, 0.15);
+}
+
+.signup-form__error {
+  display: none;
+  text-align: end;
+  margin-bottom: 5px;
+  position: relative;
+  bottom: 9px;
+  font-size: 0.7em;
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+}
+
+.error {
+  background-image: url("../images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+.sign-up-form__disclaimer {
+  color: hsl(246, 25%, 77%);
+}
+
+.sign-up-form__field {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 18px;
+  border: 1px solid rgb(185, 182, 211, 0.7);
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.sign-up-form__button {
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: inset 0 -3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.sign-up-form__button:hover {
+  background-color: hsl(154, 56%, 59%);
+}
+
+.sign-up-form__disclaimer {
+  margin: 0 auto;
+  max-width: 270px;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.sign-up-form__disclaimer--link {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 720px) {
+  body {
+    max-width: 980px;
+    padding-top: 100px;
+    background-image: url('../images/bg-intro-desktop.png');
+  }
+
+  .container {
+    height: calc(100vh - 110px);
+  }
+
+  main {
+    display: grid;
+
+    grid-template-areas:
+    "pitch subscribe";
+
+    grid-template-columns: 50% 50%;
+  }
+
+  .pitch {
+    grid-area: pitch;
+    height: 550px;
+  }
+
+  .pitch__header {
+    margin: 50px 0 35px 0;
+    max-width: 300px;
+    font-size: 2em;
+    text-align: left;
+    line-height: 1.2em;
+  }
+  
+  .pitch__description {
+    margin: 0;
+    max-width: 90%;
+    text-align: left;
+    line-height: 1.7em;
+  }
+
+  .subscribe {
+    grid-area: subscribe;
+    height: 550px;
+  }
+  
+  .trial {
+    max-width: 550px;
+    margin-bottom: 20px;
+  }
+
+  .trial__details {
+    max-width: 100%;
+  }
+
+  .sign-up-form {
+    max-width: 550px;
+    padding: 30px;
+  }
+
+  .sign-up-form__disclaimer {
+    max-width: 100%;
+  }
+}
