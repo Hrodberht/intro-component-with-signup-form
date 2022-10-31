@@ -1,5 +1,7 @@
 # Frontend Mentor - Intro component with sign up form
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/31c9b789-412d-4418-8174-41168be162bc/deploy-status)](https://app.netlify.com/sites/intro-component-sign-up-menttor/deploys)
+
 ![Design preview for the Intro component with sign up form coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
